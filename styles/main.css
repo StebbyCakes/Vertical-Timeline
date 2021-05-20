@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  background: black;
+}
+
+.context {
+  max-width: 1080px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.context .center-line{
+  position: absolute;
+  height: 100%;
+  width: 4px;
+  background: #fff;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.context .row{
+  display: flex;
+}
+
+.context .row1{
+  justify-content: flex-start;
+}
+
+.context .row2{
+  justify-content: flex-end;
+}
+.context .row3{
+  justify-content: flex-start
+}
+
+.context .row section{
+  background: #fff;
+  border-radius: 5px;
+  width: calc(50% - 40px);
+  padding: 20px;
+  position: relative;
+}
+
+.context .row section::before{
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background: #fff;
+  top: 28px;
+  z-index: -1;
+  transform: rotate(45deg);
+}
+
+section:hover{
+  animation: fade-in 3s;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.row1 section::before{
+  right: -7px;
+}
+
+.row2 section::before{
+  left: -7px;
+}
+
+.row3 section::before{
+  right: -7px;
+}
+
+.row section .details, .row section .bottom{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.row section .details .title{
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.row section p{
+  margin: 10px 0 17px 0;
+}
+
+.row section .bottom a{
+  text-decoration: none;
+  background: #40e0d0;
+  color: #fff;
+  padding: 7px 15px;
+  border-radius: 5px;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+@media(max-width: 790px){
+  .context .center-line{
+    left: 40px;
+  }
+.context .row{
+  margin: 30px 0 3px 60px;
+}
+.context .row section{
+  width: 100%;
+}
+.row1 section::before{
+  left: 7px;
+}
+.row3 section::before{
+  left: 7px;
+}
+}
+
+@media(max-width: 440px){
+  context .center-line, .row section::before{
+    display: none;
+  }
+  .context .row{
+    margin: 10px 0;
+  }
+}
