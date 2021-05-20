@@ -62,19 +62,22 @@ body{
   transform: rotate(45deg);
 }
 
-section:hover{
-  animation: fade-in 3s;
+a:hover{
+  animation: fade-in 1s;
 }
 
 @keyframes fade-in {
   0% {
     opacity: 0;
+    color: red;
   }
   60% {
     opacity: .5;
+    color: red;
   }
   100% {
     opacity: 1;
+    color: red;
   }
 }
 
