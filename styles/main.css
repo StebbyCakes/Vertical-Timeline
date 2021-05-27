@@ -28,6 +28,14 @@ body{
   transform: translateX(-50%);
 }
 
+time{
+  height: 40px;
+  width: 70px;
+  background-color: #40e0d0;
+  border: 2px solid black;
+
+}
+
 .context .row{
   display: flex;
 }
@@ -69,16 +77,40 @@ a:hover{
 @keyframes fade-in {
   0% {
     opacity: 0;
-    color: red;
+    color: black;
   }
   60% {
     opacity: .5;
-    color: red;
+    color: black;
   }
   100% {
     opacity: 1;
-    color: red;
+    color: black;
   }
+}
+
+.row section .icon{
+  position: absolute;
+  background-color: #fff;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  color: black;
+  line-height: 40px;
+  border-radius: 50%;
+  top: 13px;
+}
+
+.row1 section .icon{
+  right: -60px;
+}
+
+.row2 section .icon{
+  left: -60px;
+}
+
+.row3 section .icon{
+  right: -60px;
 }
 
 .row1 section::before{
@@ -143,4 +175,3 @@ a:hover{
   .context .row{
     margin: 10px 0;
   }
-}
